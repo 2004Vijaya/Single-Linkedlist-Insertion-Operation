@@ -1,0 +1,108 @@
+class Node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class Linkedlist:
+    def __init__(self):
+        self.head=None
+    def iab(self,data):
+        new_node=Node(data) #converts data as node
+        new_node.next=self.head
+        self.head=new_node
+        print(f"{data} inserted from begin.")
+    def display(self):
+        current=self.head
+        if not current:
+            print("ll-Empty")
+            return 
+        while current:
+            print(current.data,end="--->")
+            current=current.next
+        print("None")
+ll=Linkedlist() #ll is object for class LinkedList
+while True:
+    print("\n Linked List- Insert At Begin....")
+    print("1.Insert")
+    print("2.Display")
+    print("3.Exit")
+    choice=input("Enter your choice:")
+    if choice=='1':
+        data=int(input("Enter A value to insert:"))
+        ll.iab(data)#insert at beginning
+    elif choice=='2':
+        ll.display()
+    elif choice=='3':
+        print("Excited the operation...")
+        break
+    else:
+        print("Enter The Valid Choice....1/2/3")
+
+output:
+Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 4
+Enter The Valid Choice....1/2/3
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 1
+Enter A value to insert: 55
+55 inserted from begin.
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 1
+Enter A value to insert: 44
+44 inserted from begin.
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 1
+Enter A value to insert: 33
+33 inserted from begin.
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 1
+Enter A value to insert: 22
+22 inserted from begin.
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 1
+Enter A value to insert: 11
+11 inserted from begin.
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 1
+Enter A value to insert: 1
+1 inserted from begin.
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 2
+1--->11--->22--->33--->44--->55--->None
+
+ Linked List- Insert At Begin....
+1.Insert
+2.Display
+3.Exit
+Enter your choice: 3
+Excited the operation...
